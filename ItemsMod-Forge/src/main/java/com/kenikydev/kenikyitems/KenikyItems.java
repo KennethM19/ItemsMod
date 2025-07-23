@@ -1,5 +1,6 @@
 package com.kenikydev.kenikyitems;
 
+import com.kenikydev.kenikyitems.block.ModBlocks;
 import com.kenikydev.kenikyitems.item.ModCreativeModTabs;
 import com.kenikydev.kenikyitems.item.ModItems;
 import com.mojang.logging.LogUtils;
@@ -38,6 +39,8 @@ public class KenikyItems
         ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
