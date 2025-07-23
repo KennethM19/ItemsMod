@@ -1,10 +1,10 @@
 {
   "item.kenikyitems.sapphire" : "Sapphire",
-  "item.kenikyitems.raw_sappjire": "Raw Sapphire",
+  "item.kenikyitems.raw_sapphire": "Raw Sapphire",
 
   "block.kenikyitems.sapphire_block": "Block of Sapphire",
   "block.kenikyitems.sapphire_ore": "Sapphire Ore",
-    "block.kenikyitems.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+  "block.kenikyitems.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
 
-  "creativetab.keniky_items_tab": "Sapphire Keniky Tab"
+  "creativetab.keniky_items_tab": "Items Mod"
 }
