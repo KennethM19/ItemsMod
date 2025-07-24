@@ -1,0 +1,4 @@
+// 1.21	2025-07-24T02:48:49.2532604	Tags for minecraft:block mod id kenikyitems
+1b9679794a5ad5d864ed08219dc2543a49908e91 data/minecraft/tags/block/mineable/pickaxe.json
+cb67e2535fc8988789df03669c566de0659ba386 data/minecraft/tags/block/needs_diamond_tool.json
+25b52bfad00104d93862fd03031bd343ca98db14 data/minecraft/tags/block/needs_iron_tool.json

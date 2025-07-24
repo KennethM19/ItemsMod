@@ -25,18 +25,18 @@ public class ChiselItem extends Item {
             Blocks.IRON_BLOCK, ModBlocks.SAPPHIRE_BLOCK.get()
     );
 
-    public ChiselItem(Properties p_41383_) {
-        super(p_41383_);
+    public ChiselItem(Properties properties) {
+        super(properties);
     }
 
     @Override
-    public InteractionResult useOn(UseOnContext p_41427_) {
-        Level level = p_41427_.getLevel();
-        BlockPos pos = p_41427_.getClickedPos();
+    public InteractionResult useOn(UseOnContext context) {
+        Level level = context.getLevel();
+        BlockPos pos = context.getClickedPos();
         BlockState originalState = level.getBlockState(pos);
         Block originalBlock = originalState.getBlock();
-        ItemStack tool = p_41427_.getItemInHand();
-        Player player = p_41427_.getPlayer();
+        ItemStack tool = context.getItemInHand();
+        Player player = context.getPlayer();
 
         if (CHISEL_MAP.containsKey(originalBlock)) {
             if (!level.isClientSide()) {
