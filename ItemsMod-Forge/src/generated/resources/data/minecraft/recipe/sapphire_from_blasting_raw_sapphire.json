@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.3,
+  "group": "sapphire",
+  "ingredient": {
+    "item": "kenikyitems:raw_sapphire"
+  },
+  "result": {
+    "id": "kenikyitems:sapphire"
+  }
+}

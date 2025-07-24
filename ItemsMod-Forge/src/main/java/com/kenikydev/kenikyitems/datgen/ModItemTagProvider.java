@@ -1,0 +1,28 @@
+package com.kenikydev.kenikyitems.datgen;
+
+import com.kenikydev.kenikyitems.KenikyItems;
+import com.kenikydev.kenikyitems.item.ModItems;
+import com.kenikydev.kenikyitems.util.ModTags;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.concurrent.CompletableFuture;
+
+public class ModItemTagProvider extends ItemTagsProvider {
+    public ModItemTagProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> providerCompletableFuture, CompletableFuture<TagLookup<Block>> tagLookupCompletableFuture, @Nullable ExistingFileHelper fileHelper) {
+        super(packOutput, providerCompletableFuture, tagLookupCompletableFuture, KenikyItems.MODID, fileHelper);
+    }
+
+    @Override
+    protected void addTags(HolderLookup.Provider p_256380_) {
+        tag(ModTags.Items.TRANSFORMABLE_ITEMS)
+                .add(ModItems.RAW_SAPPHIRE.get())
+                .add(ModItems.SAPPHIRE.get())
+                .add(Items.COAL);
+    }
+}
