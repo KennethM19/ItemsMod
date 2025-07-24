@@ -21,6 +21,8 @@ public class ModCreativeModTabs {
                 pOutput.accept(ModItems.SAPPHIRE.get());
                 pOutput.accept(ModItems.RAW_SAPPHIRE.get());
                 pOutput.accept(ModItems.CHISSEL.get());
+                pOutput.accept(ModItems.KFOOD.get());
+                pOutput.accept(ModItems.AURORA_ASHES.get());
 
                 pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                 pOutput.accept(ModBlocks.SAPPHIRE_ORE.get());
