@@ -1,6 +1,7 @@
 package com.kenikydev.kenikyitems.block;
 
 import com.kenikydev.kenikyitems.KenikyItems;
+import com.kenikydev.kenikyitems.block.custom.MagicBlock;
 import com.kenikydev.kenikyitems.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -25,6 +26,8 @@ public class ModBlocks {
     public static  final RegistryObject<Block> SAPPHIRE_ORE = registerBlock("sapphire_ore",() -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> DEEPSLATE_SAPPHIRE_ORE = registerBlock("deepslate_sapphire_ore", () -> new DropExperienceBlock(UniformInt.of(3,6), BlockBehaviour.Properties.of().strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block", () -> new MagicBlock(BlockBehaviour.Properties.of().strength(6f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
