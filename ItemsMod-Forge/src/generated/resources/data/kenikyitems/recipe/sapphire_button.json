@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "sapphire",
+  "ingredients": [
+    {
+      "item": "kenikyitems:sapphire"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kenikyitems:sapphire_button"
+  }
+}

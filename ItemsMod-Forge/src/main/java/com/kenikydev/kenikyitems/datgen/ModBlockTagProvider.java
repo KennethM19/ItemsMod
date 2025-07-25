@@ -24,11 +24,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.MAGIC_BLOCK.get())
                 .add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get())
                 .add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
+
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.SAPPHIRE_BLOCK.get())
                 .add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get())
                 .add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
+
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.MAGIC_BLOCK.get());
+
+        tag(BlockTags.FENCES).add(ModBlocks.SAPPHIRE_FENCE.get());
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.SAPPHIRE_FENCE_GATE.get());
+        tag(BlockTags.WALLS).add(ModBlocks.SAPPHIRE_WALL.get());
     }
 }

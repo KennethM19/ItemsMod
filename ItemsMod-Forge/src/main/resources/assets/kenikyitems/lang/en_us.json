@@ -9,6 +9,16 @@
   "block.kenikyitems.sapphire_ore": "Sapphire Ore",
   "block.kenikyitems.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
   "block.kenikyitems.magic_block": "Magic Block",
+  "block.kenikyitmes.sapphire_slabs": "Slab of Sapphire",
+  "block.kenikyitmes.sapphire_stairs": "Stair of Sapphire",
+  "block.kenikyitmes.sapphire_pressure_plate": "Pressure Plate of Sapphire",
+  "block.kenikyitmes.sapphire_button": "Button of Sapphire",
+  "block.kenikyitmes.sapphire_fence": "Fence of Sapphire",
+  "block.kenikyitmes.sapphire_fence_gate": "Fence Gate of Sapphire",
+  "block.kenikyitmes.sapphire_wall": "Wall of Sapphire",
+  "block.kenikyitmes.sapphire_door": "Door of Sapphire",
+  "block.kenikyitmes.sapphire_trapdoor": "Trapdoor of Sapphire",
+
 
   "creativetab.keniky_items_tab": "Items Mod",
 

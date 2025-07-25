@@ -29,7 +29,19 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
-        // dropSelf(ModBlocks.MAGIC_BLOCK.get());
+        dropSelf(ModBlocks.SAPPHIRE_WALL.get());
+        dropSelf(ModBlocks.SAPPHIRE_BUTTON.get());
+        dropSelf(ModBlocks.SAPPHIRE_FENCE.get());
+        dropSelf(ModBlocks.SAPPHIRE_FENCE_GATE.get());
+        dropSelf(ModBlocks.SAPPHIRE_TRAPDOOR.get());
+        dropSelf(ModBlocks.SAPPHIRE_STAIRS.get());
+        dropSelf(ModBlocks.SAPPHIRE_PRESSURE_PLATE.get());
+
+        this.add(ModBlocks.SAPPHIRE_DOOR.get(),
+                block -> createDoorTable(ModBlocks.SAPPHIRE_DOOR.get()));
+
+        this.add(ModBlocks.SAPPHIRE_SLABS.get(),
+                block -> createSlabItemTable(ModBlocks.SAPPHIRE_SLABS.get()));
 
         this.add(ModBlocks.SAPPHIRE_ORE.get(),
                 block -> createOreDrop(ModBlocks.SAPPHIRE_ORE.get(), ModItems.RAW_SAPPHIRE.get()));

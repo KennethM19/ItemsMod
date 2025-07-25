@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "sapphire",
+  "key": {
+    "#": {
+      "item": "kenikyitems:sapphire"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "kenikyitems:sapphire_trapdoor"
+  }
+}
