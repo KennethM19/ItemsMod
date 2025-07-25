@@ -2,9 +2,12 @@ package com.kenikydev.kenikyitems.datgen;
 
 import com.kenikydev.kenikyitems.KenikyItems;
 import com.kenikydev.kenikyitems.block.ModBlocks;
+import com.kenikydev.kenikyitems.block.custom.SapphireLampBlock;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -38,6 +41,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.SAPPHIRE_PRESSURE_PLATE);
         blockItem(ModBlocks.SAPPHIRE_FENCE_GATE);
         blockItem(ModBlocks.SAPPHIRE_TRAPDOOR, "_bottom");
+
+        customLamp();
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
@@ -52,5 +57,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void blockItem(RegistryObject<? extends Block> blockRegistryObject, String appendix) {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("kenikyitems:block/" +
                 ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
+    }
+
+    private void customLamp() {
+        getVariantBuilder(ModBlocks.SAPPHIRE_LAMP.get()).forAllStates(state ->
+        {
+            if (state.getValue(SapphireLampBlock.CLICKED)) {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("sapphire_lamp_on",
+                        ResourceLocation.fromNamespaceAndPath(KenikyItems.MODID, "block/sapphire_lamp_on")))};
+            }  else {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("sapphire_lamp_off",
+                        ResourceLocation.fromNamespaceAndPath(KenikyItems.MODID, "block/sapphire_lamp_off")))};
+            }
+        });
+
+        simpleBlockItem(ModBlocks.SAPPHIRE_LAMP.get(), models().cubeAll("sapphire_lamp_on",
+                ResourceLocation.fromNamespaceAndPath(KenikyItems.MODID, "block/sapphire_lamp_on")));
     }
 }

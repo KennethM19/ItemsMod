@@ -36,6 +36,7 @@ public class ModCreativeModTabs {
                 pOutput.accept(ModBlocks.SAPPHIRE_BUTTON.get());
                 pOutput.accept(ModBlocks.SAPPHIRE_WALL.get());
                 pOutput.accept(ModBlocks.SAPPHIRE_SLABS.get());
+                pOutput.accept(ModBlocks.SAPPHIRE_LAMP.get());
             }).build());
 
     public static void register(IEventBus eventBus) {

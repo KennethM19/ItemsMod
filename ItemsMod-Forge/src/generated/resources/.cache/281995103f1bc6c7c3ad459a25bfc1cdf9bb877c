@@ -1,4 +1,4 @@
-// 1.21	2025-07-24T21:55:00.8843657	Block States: kenikyitems
+// 1.21	2025-07-25T17:01:31.4503677	Block States: kenikyitems
 b14045642b038f9f2b643db7d6d180b03e07a461 assets/kenikyitems/blockstates/deepslate_sapphire_ore.json
 6fc3f6813e3b52777500fe1b4d6d83288f683b39 assets/kenikyitems/blockstates/magic_block.json
 1059ecf89dd6fb023c910b6005c3820423c88e21 assets/kenikyitems/blockstates/sapphire_block.json
@@ -6,6 +6,7 @@ cd12e8c7f318098138e0e60f4d5167f092986ed7 assets/kenikyitems/blockstates/sapphire
 53422da0a9245c0b4d266ee69aefff6bb339c8a4 assets/kenikyitems/blockstates/sapphire_door.json
 9bc4b3080ad44b909a0dd6e405fe717aaabaf8d3 assets/kenikyitems/blockstates/sapphire_fence.json
 63ff7016e7b8214ae374ab1f3a8c7907e69f02ee assets/kenikyitems/blockstates/sapphire_fence_gate.json
+1f020869c942b04dc2a3acaed29bf7bad6994abf assets/kenikyitems/blockstates/sapphire_lamp.json
 d52c81d9a79da04d7b650b13721c60188dec7927 assets/kenikyitems/blockstates/sapphire_ore.json
 937e4b66cc396af8724c2351f8f35e93a522fbca assets/kenikyitems/blockstates/sapphire_pressure_plate.json
 2165a2cf06e8f847466f20ff8c9518be367f78b2 assets/kenikyitems/blockstates/sapphire_slabs.json
@@ -31,6 +32,8 @@ ce6e8a9dff791c4e775ddb444a5acf5696ba3c44 assets/kenikyitems/models/block/sapphir
 cc13a32e4ab91eacc24aa291b7892caa8e3b5a01 assets/kenikyitems/models/block/sapphire_fence_gate_wall_open.json
 ca57675fc22858cad508f394be5c7d16580efbb5 assets/kenikyitems/models/block/sapphire_fence_post.json
 027a490a60cda81e0ecc7bd8ec179850aacc1451 assets/kenikyitems/models/block/sapphire_fence_side.json
+2a1ea09ef42e74b7b5a0df0b9b7ce12da8ca04d2 assets/kenikyitems/models/block/sapphire_lamp_off.json
+cd9f18eed73ee8ea6e2c4a07bd84c08ba7a0bbdc assets/kenikyitems/models/block/sapphire_lamp_on.json
 876aa4000731a01d464326f9488af3a434abe4d4 assets/kenikyitems/models/block/sapphire_ore.json
 728034757c49652a70e3bd0847607120d1829589 assets/kenikyitems/models/block/sapphire_pressure_plate.json
 3af2e6972ce3ef7edd2ed562a9136e6a062c6c97 assets/kenikyitems/models/block/sapphire_pressure_plate_down.json
@@ -49,6 +52,7 @@ b323ddcab33e71a7a0a75a1601f1dcc6b3764073 assets/kenikyitems/models/item/deepslat
 6e36ed1bd9224b168e80b6d54441c07d92c614ae assets/kenikyitems/models/item/magic_block.json
 d4610832bf93f7a099cae1ed8f8a111e813646a7 assets/kenikyitems/models/item/sapphire_block.json
 9ac3c14756661c24295d001a5bbfefd79a769bed assets/kenikyitems/models/item/sapphire_fence_gate.json
+ba187b1b2883bf1cd3911bc28b52c9e171d62392 assets/kenikyitems/models/item/sapphire_lamp.json
 336485ed6d920a4e1620876be4f7bddd672e363d assets/kenikyitems/models/item/sapphire_ore.json
 1377de6192201344ad5faa62f02169fe9db17fe6 assets/kenikyitems/models/item/sapphire_pressure_plate.json
 93d68de6e6dcb63cfed2b50576e419b7930867d7 assets/kenikyitems/models/item/sapphire_slabs.json

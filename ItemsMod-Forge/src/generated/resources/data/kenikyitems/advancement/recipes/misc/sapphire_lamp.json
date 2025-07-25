@@ -1,11 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_sapphire_block": {
+    "has_redstone": {
       "conditions": {
         "items": [
           {
-            "items": "kenikyitems:sapphire_block"
+            "items": "minecraft:redstone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_sapphire": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kenikyitems:sapphire"
           }
         ]
       },
@@ -13,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "kenikyitems:sapphire_from_magic_block"
+        "recipe": "kenikyitems:sapphire_lamp"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +31,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_sapphire_block"
+      "has_sapphire",
+      "has_redstone"
     ]
   ],
   "rewards": {
     "recipes": [
-      "kenikyitems:sapphire_from_magic_block"
+      "kenikyitems:sapphire_lamp"
     ]
   }
 }

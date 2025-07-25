@@ -36,6 +36,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.SAPPHIRE_TRAPDOOR.get());
         dropSelf(ModBlocks.SAPPHIRE_STAIRS.get());
         dropSelf(ModBlocks.SAPPHIRE_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.SAPPHIRE_LAMP.get());
 
         this.add(ModBlocks.SAPPHIRE_DOOR.get(),
                 block -> createDoorTable(ModBlocks.SAPPHIRE_DOOR.get()));

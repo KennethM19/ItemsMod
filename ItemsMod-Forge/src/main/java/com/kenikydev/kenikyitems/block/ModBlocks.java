@@ -2,6 +2,7 @@ package com.kenikydev.kenikyitems.block;
 
 import com.kenikydev.kenikyitems.KenikyItems;
 import com.kenikydev.kenikyitems.block.custom.MagicBlock;
+import com.kenikydev.kenikyitems.block.custom.SapphireLampBlock;
 import com.kenikydev.kenikyitems.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -60,6 +61,10 @@ public class ModBlocks {
     public static final RegistryObject<TrapDoorBlock> SAPPHIRE_TRAPDOOR = registerBlock("sapphire_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.ACACIA,
                     BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final RegistryObject<Block> SAPPHIRE_LAMP = registerBlock("sapphire_lamp",
+            () -> new SapphireLampBlock(BlockBehaviour.Properties.of().strength(3f)
+                    .lightLevel(state -> state.getValue(SapphireLampBlock.CLICKED) ? 15 : 0)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

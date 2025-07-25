@@ -3,9 +3,11 @@ package com.kenikydev.kenikyitems.datgen;
 import com.kenikydev.kenikyitems.KenikyItems;
 import com.kenikydev.kenikyitems.block.ModBlocks;
 import com.kenikydev.kenikyitems.item.ModItems;
+import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -30,13 +32,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', ModItems.SAPPHIRE.get())
                 .unlockedBy(getHasName(ModItems.SAPPHIRE.get()), has(ModItems.SAPPHIRE.get())).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SAPPHIRE_LAMP.get())
+                .pattern("ARA")
+                .pattern("RAR")
+                .pattern("ARA")
+                .define('A', ModItems.SAPPHIRE.get())
+                .define('R', Items.REDSTONE)
+                .unlockedBy("has_sapphire",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.SAPPHIRE.get())
+                ).unlockedBy("has_redstone",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(Items.REDSTONE)
+                ).save(recipeOutput);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 9)
                 .requires(ModBlocks.SAPPHIRE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.SAPPHIRE_BLOCK.get()), has(ModBlocks.SAPPHIRE_BLOCK.get())).save(recipeOutput);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 9)
-                .requires(ModBlocks.MAGIC_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.SAPPHIRE_BLOCK.get()), has(ModBlocks.SAPPHIRE_BLOCK.get())).save(recipeOutput, KenikyItems.MODID + ":sapphire_from_magic_block");
 
         oreSmelting(recipeOutput, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 0.20f, 200, "sapphire");
 
