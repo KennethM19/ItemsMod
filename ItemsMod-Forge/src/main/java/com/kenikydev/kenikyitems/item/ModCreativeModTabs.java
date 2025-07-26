@@ -38,6 +38,12 @@ public class ModCreativeModTabs {
                 //Armas
                 pOutput.accept(ModItems.SAPPHIRE_SWORD.get());
 
+                //Armaduras
+                pOutput.accept(ModItems.SAPPHIRE_HELMET.get());
+                pOutput.accept(ModItems.SAPPHIRE_CHESTPLATE.get());
+                pOutput.accept(ModItems.SAPPHIRE_LEGGINGS.get());
+                pOutput.accept(ModItems.SAPPHIRE_BOOTS.get());
+
                 //Bloques de construcción
                 pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                 pOutput.accept(ModBlocks.SAPPHIRE_PRESSURE_PLATE.get());

@@ -4,16 +4,39 @@ import com.kenikydev.kenikyitems.KenikyItems;
 import com.kenikydev.kenikyitems.block.ModBlocks;
 import com.kenikydev.kenikyitems.item.ModItems;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.PackType;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.armortrim.TrimMaterial;
+import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.LinkedHashMap;
+
 public class ModItemModelProvider extends ItemModelProvider {
+    private static LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>(); //Agrega más dieño de las armaduras con los moldes
+    static {
+        trimMaterials.put(TrimMaterials.QUARTZ, 0.1F);
+        trimMaterials.put(TrimMaterials.IRON, 0.2F);
+        trimMaterials.put(TrimMaterials.NETHERITE, 0.3F);
+        trimMaterials.put(TrimMaterials.REDSTONE, 0.4F);
+        trimMaterials.put(TrimMaterials.COPPER, 0.5F);
+        trimMaterials.put(TrimMaterials.GOLD, 0.6F);
+        trimMaterials.put(TrimMaterials.EMERALD, 0.7F);
+        trimMaterials.put(TrimMaterials.DIAMOND, 0.8F);
+        trimMaterials.put(TrimMaterials.LAPIS, 0.9F);
+        trimMaterials.put(TrimMaterials.AMETHYST, 1.0F);
+    }
+
+
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, KenikyItems.MODID, existingFileHelper);
     }
@@ -43,6 +66,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.SAPPHIRE_SWORD);
         handheldItem(ModItems.SAPPHIRE_SHOVEL);
         handheldItem(ModItems.SAPPHIRE_HAMMER);
+
+        trimmedArmorItem(ModItems.SAPPHIRE_HELMET);
+        trimmedArmorItem(ModItems.SAPPHIRE_CHESTPLATE);
+        trimmedArmorItem(ModItems.SAPPHIRE_LEGGINGS);
+        trimmedArmorItem(ModItems.SAPPHIRE_BOOTS);
     }
 
     //Función para items con representación especial
@@ -73,5 +101,49 @@ public class ModItemModelProvider extends ItemModelProvider {
         return  withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/handheld")).texture("layer0",
                 ResourceLocation.fromNamespaceAndPath(KenikyItems.MODID, "item/" + item.getId().getPath()));
+    }
+
+    //Genera modelo de diseño de armaduras
+    private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
+        final String MOD_ID = KenikyItems.MODID;
+
+        if(itemRegistryObject.get() instanceof ArmorItem armorItem) { //Confirma que el item es una armadura
+            trimMaterials.forEach((trimMaterial, value) -> { //Genera variantes para cada material de recorte (molde)
+                float trimValue = value;
+
+                String armorType = switch (armorItem.getEquipmentSlot()) { //Identifica el tipo de pieza de armadira
+                    case HEAD -> "helmet";
+                    case CHEST -> "chestplate";
+                    case LEGS -> "leggings";
+                    case FEET -> "boots";
+                    default -> "";
+                };
+
+                String armorItemPath = armorItem.toString();
+                String trimPath = "trims/items/" + armorType + "_trim_" + trimMaterial.location().getPath();
+                String currentTrimName = armorItemPath + "_" + trimMaterial.location().getPath() + "_trim";
+                ResourceLocation armorItemResLoc = ResourceLocation.parse(armorItemPath);
+                ResourceLocation trimResLoc = ResourceLocation.parse(trimPath);
+                ResourceLocation trimNameResLoc = ResourceLocation.parse(currentTrimName); //Genera la ruta a la textura de recorte
+
+                existingFileHelper.trackGenerated(trimResLoc, PackType.CLIENT_RESOURCES, ".png", "textures"); //Informa a Forge sobre la textura de recorte
+
+                getBuilder(currentTrimName)
+                        .parent(new ModelFile.UncheckedModelFile("item/generated"))
+                        .texture("layer0", armorItemResLoc.getNamespace() + ":item/" + armorItemResLoc.getPath()) //Textura base de la armadura
+                        .texture("layer1", trimResLoc); //Textura del recorte
+
+                //Crea el modelo base con variantes para cada recorte
+                //Usa el predicate trim_type para cambiar el modelo según el material aplicado
+                this.withExistingParent(itemRegistryObject.getId().getPath(),
+                                mcLoc("item/generated"))
+                        .override()
+                        .model(new ModelFile.UncheckedModelFile(trimNameResLoc.getNamespace()  + ":item/" + trimNameResLoc.getPath()))
+                        .predicate(mcLoc("trim_type"), trimValue).end()
+                        .texture("layer0",
+                                ResourceLocation.fromNamespaceAndPath(MOD_ID,
+                                        "item/" + itemRegistryObject.getId().getPath()));
+            });
+        }
     }
 }

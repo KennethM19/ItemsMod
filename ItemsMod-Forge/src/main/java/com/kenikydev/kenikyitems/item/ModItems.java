@@ -70,6 +70,22 @@ public class ModItems {
             () -> new HammerItem(ModToolTiers.SAPPHIRE, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(ModToolTiers.SAPPHIRE, 7, -3.5F))));
 
+    public static final RegistryObject<Item> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet",
+            () -> new ArmorItem(ModArmorMaterial.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new  Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(18))));
+
+    public static final RegistryObject<Item> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings",
+            () -> new ArmorItem(ModArmorMaterial.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new  Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(18))));
+
+    public static final RegistryObject<Item> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate",
+            () -> new ArmorItem(ModArmorMaterial.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new  Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(18))));
+
+    public static final RegistryObject<Item> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots",
+            () -> new ArmorItem(ModArmorMaterial.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new  Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(18))));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
