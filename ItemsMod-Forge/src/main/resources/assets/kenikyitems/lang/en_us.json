@@ -26,5 +26,6 @@
   "tooltip.items.custom.magic_block": "This block is magic",
   "tooltip.items.custom.aurora_ashes": "This is a better fuel",
   "tooltip.items.custom.kfood": "Eat for more speed",
+  "tooltip.items.custom.chisel": "Change texture block",
   "tooltip.items.custom.shift_up": "Press §eShitf§r for more information"
 }

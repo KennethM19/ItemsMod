@@ -1,11 +1,11 @@
 package com.kenikydev.kenikyitems;
 
 import com.kenikydev.kenikyitems.block.ModBlocks;
+import com.kenikydev.kenikyitems.component.ModDataComponentsTypes;
 import com.kenikydev.kenikyitems.item.ModCreativeModTabs;
 import com.kenikydev.kenikyitems.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
@@ -41,6 +41,8 @@ public class KenikyItems
         ModItems.register(modEventBus);
 
         ModBlocks.register(modEventBus);
+
+        ModDataComponentsTypes.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
