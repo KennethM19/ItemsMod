@@ -3,6 +3,7 @@ package com.kenikydev.kenikyitems.item;
 import com.kenikydev.kenikyitems.KenikyItems;
 import com.kenikydev.kenikyitems.item.custom.ChiselItem;
 import com.kenikydev.kenikyitems.item.custom.FuelItem;
+import com.kenikydev.kenikyitems.item.custom.HammerItem;
 import com.kenikydev.kenikyitems.util.ShiftTooltipSupport;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
@@ -64,6 +65,10 @@ public class ModItems {
     public static final RegistryObject<Item> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe",
             () -> new HoeItem(ModToolTiers.SAPPHIRE, new Item.Properties()
                     .attributes(HoeItem.createAttributes(ModToolTiers.SAPPHIRE, 1, -2.6F))));
+
+    public static final RegistryObject<Item> SAPPHIRE_HAMMER = ITEMS.register("sapphire_hammer",
+            () -> new HammerItem(ModToolTiers.SAPPHIRE, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.SAPPHIRE, 7, -3.5F))));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

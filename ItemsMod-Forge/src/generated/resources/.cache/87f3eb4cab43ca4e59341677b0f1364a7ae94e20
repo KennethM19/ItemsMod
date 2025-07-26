@@ -1,4 +1,4 @@
-// 1.21	2025-07-26T00:27:44.8613873	Item Models: kenikyitems
+// 1.21	2025-07-26T02:04:48.1411985	Item Models: kenikyitems
 fdc8d991820e0670a1ee9390aefa232733d7058f assets/kenikyitems/models/item/aurora_ashes.json
 c479fd5b77bf2df554357dcec820189702f00a6c assets/kenikyitems/models/item/chisel.json
 0737031c975bf21df64c643b2a60982bb2d44017 assets/kenikyitems/models/item/kfood.json
@@ -8,6 +8,7 @@ c3270aca8eb50bf08f54eec302eab7ca07d576c7 assets/kenikyitems/models/item/raw_sapp
 29ab013171c301aff6b65a88350e2355ebd02892 assets/kenikyitems/models/item/sapphire_button.json
 f0537c551e1966dc1f2b2dd61a6574177c27475c assets/kenikyitems/models/item/sapphire_door.json
 7582b596328639889560990c8165300f9e954df2 assets/kenikyitems/models/item/sapphire_fence.json
+130bdca6c72d088ea21e9d6bdd04093f9f3754b6 assets/kenikyitems/models/item/sapphire_hammer.json
 29a5de0d672d8ee411011865ceeb7becd3b4e93d assets/kenikyitems/models/item/sapphire_hoe.json
 3e66e7093182b61f0a6ecb5cbbb6af19c7390dbb assets/kenikyitems/models/item/sapphire_pickaxe.json
 2d57ff44a4af096996a586ceb514718000d79530 assets/kenikyitems/models/item/sapphire_shovel.json

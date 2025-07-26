@@ -27,6 +27,7 @@ public class ModCreativeModTabs {
                 pOutput.accept(ModItems.CHISSEL.get());
                 pOutput.accept(ModItems.KFOOD.get());
                 pOutput.accept(ModItems.AURORA_ASHES.get());
+                pOutput.accept(ModItems.SAPPHIRE_HAMMER.get());
 
                 //Herramientas
                 pOutput.accept(ModItems.SAPPHIRE_HOE.get());
