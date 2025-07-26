@@ -5,6 +5,7 @@ import com.kenikydev.kenikyitems.block.ModBlocks;
 import com.kenikydev.kenikyitems.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -19,19 +20,31 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+
+        //Genera modelo de items básicos
         basicItem(ModItems.SAPPHIRE.get());
         basicItem(ModItems.RAW_SAPPHIRE.get());
         basicItem(ModItems.CHISSEL.get());
         basicItem(ModItems.AURORA_ASHES.get());
         basicItem(ModItems.KFOOD.get());
 
+        //Modelos especiales -Tienen una apariencia diferente como ítem que como bloque colocado
         buttonItem(ModBlocks.SAPPHIRE_BUTTON, ModBlocks.SAPPHIRE_BLOCK);
         fenceItem(ModBlocks.SAPPHIRE_FENCE, ModBlocks.SAPPHIRE_BLOCK);
         wallItem(ModBlocks.SAPPHIRE_WALL, ModBlocks.SAPPHIRE_BLOCK);
 
+        //BLoques de forma especial
         simpleBlockItem(ModBlocks.SAPPHIRE_DOOR);
+
+        //Items que se sostienen en ángulo
+        handheldItem(ModItems.SAPPHIRE_AXE);
+        handheldItem(ModItems.SAPPHIRE_PICKAXE);
+        handheldItem(ModItems.SAPPHIRE_HOE);
+        handheldItem(ModItems.SAPPHIRE_SWORD);
+        handheldItem(ModItems.SAPPHIRE_SHOVEL);
     }
 
+    //Función para items con representación especial
     public void buttonItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
                 .texture("texture", ResourceLocation.fromNamespaceAndPath(KenikyItems.MODID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
@@ -47,9 +60,17 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .texture("wall", ResourceLocation.fromNamespaceAndPath(KenikyItems.MODID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
+    //Función para items con representación 2D en el inventario
     private ItemModelBuilder simpleBlockItem(RegistryObject<? extends Block> item) {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(KenikyItems.MODID, "item/" + item.getId().getPath()));
+    }
+
+    //Función para items con posición en ángulo en la mano
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+        return  withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/handheld")).texture("layer0",
                 ResourceLocation.fromNamespaceAndPath(KenikyItems.MODID, "item/" + item.getId().getPath()));
     }
 }

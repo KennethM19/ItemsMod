@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#kenikyitems:needs_sapphire_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_netherite_tool"
+  ]
+}

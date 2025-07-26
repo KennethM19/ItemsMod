@@ -18,16 +18,27 @@ public class ModCreativeModTabs {
             .icon(() -> new ItemStack(ModItems.SAPPHIRE.get()))
             .title(Component.translatable("creativetab.keniky_items_tab"))
             .displayItems((pParameters, pOutput) -> {
+                //Items Materiales
                 pOutput.accept(ModItems.SAPPHIRE.get());
                 pOutput.accept(ModItems.RAW_SAPPHIRE.get());
+
+
+                //Items personalizados
                 pOutput.accept(ModItems.CHISSEL.get());
                 pOutput.accept(ModItems.KFOOD.get());
                 pOutput.accept(ModItems.AURORA_ASHES.get());
 
+                //Herramientas
+                pOutput.accept(ModItems.SAPPHIRE_HOE.get());
+                pOutput.accept(ModItems.SAPPHIRE_SHOVEL.get());
+                pOutput.accept(ModItems.SAPPHIRE_AXE.get());
+                pOutput.accept(ModItems.SAPPHIRE_PICKAXE.get());
+
+                //Armas
+                pOutput.accept(ModItems.SAPPHIRE_SWORD.get());
+
+                //Bloques de construcción
                 pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
-                pOutput.accept(ModBlocks.SAPPHIRE_ORE.get());
-                pOutput.accept(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
-                pOutput.accept(ModBlocks.MAGIC_BLOCK.get());
                 pOutput.accept(ModBlocks.SAPPHIRE_PRESSURE_PLATE.get());
                 pOutput.accept(ModBlocks.SAPPHIRE_FENCE.get());
                 pOutput.accept(ModBlocks.SAPPHIRE_FENCE_GATE.get());
@@ -36,6 +47,16 @@ public class ModCreativeModTabs {
                 pOutput.accept(ModBlocks.SAPPHIRE_BUTTON.get());
                 pOutput.accept(ModBlocks.SAPPHIRE_WALL.get());
                 pOutput.accept(ModBlocks.SAPPHIRE_SLABS.get());
+                pOutput.accept(ModBlocks.SAPPHIRE_STAIRS.get());
+
+                //Minerales en bruto
+                pOutput.accept(ModBlocks.SAPPHIRE_ORE.get());
+                pOutput.accept(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
+
+                //Bloques personalizados
+                pOutput.accept(ModBlocks.MAGIC_BLOCK.get());
+
+                //BLoques de decoración
                 pOutput.accept(ModBlocks.SAPPHIRE_LAMP.get());
             }).build());
 
