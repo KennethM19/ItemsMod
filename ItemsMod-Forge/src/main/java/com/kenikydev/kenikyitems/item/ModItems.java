@@ -4,6 +4,7 @@ import com.kenikydev.kenikyitems.KenikyItems;
 import com.kenikydev.kenikyitems.item.custom.ChiselItem;
 import com.kenikydev.kenikyitems.item.custom.FuelItem;
 import com.kenikydev.kenikyitems.item.custom.HammerItem;
+import com.kenikydev.kenikyitems.item.custom.ModArmorItem;
 import com.kenikydev.kenikyitems.util.ShiftTooltipSupport;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
@@ -71,7 +72,7 @@ public class ModItems {
                     .attributes(PickaxeItem.createAttributes(ModToolTiers.SAPPHIRE, 7, -3.5F))));
 
     public static final RegistryObject<Item> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet",
-            () -> new ArmorItem(ModArmorMaterial.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+            () -> new ModArmorItem(ModArmorMaterial.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new  Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(18))));
 
     public static final RegistryObject<Item> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings",
