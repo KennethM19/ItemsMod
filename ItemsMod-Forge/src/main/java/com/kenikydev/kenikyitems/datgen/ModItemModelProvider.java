@@ -50,6 +50,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.CHISSEL.get());
         basicItem(ModItems.AURORA_ASHES.get());
         basicItem(ModItems.KFOOD.get());
+        basicItem(ModItems.SAPPHIRE_HORSE_ARMOR.get());
 
         //Modelos especiales -Tienen una apariencia diferente como ítem que como bloque colocado
         buttonItem(ModBlocks.SAPPHIRE_BUTTON, ModBlocks.SAPPHIRE_BLOCK);
@@ -67,6 +68,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.SAPPHIRE_SHOVEL);
         handheldItem(ModItems.SAPPHIRE_HAMMER);
 
+        //Item que puden cambiar su diseño
         trimmedArmorItem(ModItems.SAPPHIRE_HELMET);
         trimmedArmorItem(ModItems.SAPPHIRE_CHESTPLATE);
         trimmedArmorItem(ModItems.SAPPHIRE_LEGGINGS);

@@ -87,6 +87,10 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterial.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new  Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(18))));
 
+    public static final RegistryObject<Item> SAPPHIRE_HORSE_ARMOR = ITEMS.register("sapphire_horse_armor",
+            () -> new AnimalArmorItem(ModArmorMaterial.SAPPHIRE_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
+                    false, new Item.Properties().stacksTo(1)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

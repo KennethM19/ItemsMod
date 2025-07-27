@@ -1,4 +1,4 @@
-// 1.21	2025-07-26T03:26:00.7685524	Item Models: kenikyitems
+// 1.21	2025-07-26T17:49:23.3246568	Item Models: kenikyitems
 fdc8d991820e0670a1ee9390aefa232733d7058f assets/kenikyitems/models/item/aurora_ashes.json
 c479fd5b77bf2df554357dcec820189702f00a6c assets/kenikyitems/models/item/chisel.json
 0737031c975bf21df64c643b2a60982bb2d44017 assets/kenikyitems/models/item/kfood.json
@@ -43,6 +43,7 @@ c8fc99f4346d755a85d2d681ab4ed5734db2e64f assets/kenikyitems/models/item/sapphire
 2c4f4a1ebc63415e8cf742c3677694fb5f5c2672 assets/kenikyitems/models/item/sapphire_helmet_quartz_trim.json
 5305b8f1cf8ac8b19577bfdf185b92e75f96cf25 assets/kenikyitems/models/item/sapphire_helmet_redstone_trim.json
 29a5de0d672d8ee411011865ceeb7becd3b4e93d assets/kenikyitems/models/item/sapphire_hoe.json
+cdbb588f4bdb1cc97e5a6f2a9806cb912961aa45 assets/kenikyitems/models/item/sapphire_horse_armor.json
 ffb75f6a43499db32711c2bbac8e3f5f2616e7e8 assets/kenikyitems/models/item/sapphire_leggings.json
 79b5c88ae20392f9d64059f57846b541d8d0c123 assets/kenikyitems/models/item/sapphire_leggings_amethyst_trim.json
 d824b01981a95e059554794e762660aef5e1af87 assets/kenikyitems/models/item/sapphire_leggings_copper_trim.json
