@@ -22,7 +22,8 @@ public class ModEvents {
         Player player = event.getPlayer();
         ItemStack stack = player.getMainHandItem();
 
-        if (stack.getItem() instanceof HammerItem hammerItem && player instanceof ServerPlayer serverPlayer) { //Comprueba si el jugador usa el martillo
+        //Comprueba si el jugador usa el martillo - el formato es válido si hay una clase propia par ael item (HammerItem)
+        if (stack.getItem() instanceof HammerItem hammerItem && player instanceof ServerPlayer serverPlayer) {
             BlockPos initialBlockPos = event.getPos();
             if (HARVESTED_BLOCKS.contains(initialBlockPos)) {//Evita el procesamiento del mismo bloque repetidas veces
                 return;

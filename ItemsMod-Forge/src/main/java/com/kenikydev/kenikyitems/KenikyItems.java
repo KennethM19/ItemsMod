@@ -4,6 +4,7 @@ import com.kenikydev.kenikyitems.block.ModBlocks;
 import com.kenikydev.kenikyitems.component.ModDataComponentsTypes;
 import com.kenikydev.kenikyitems.item.ModCreativeModTabs;
 import com.kenikydev.kenikyitems.item.ModItems;
+import com.kenikydev.kenikyitems.util.ModItemProperties;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -65,6 +66,17 @@ public class KenikyItems
         LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
 
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
+    }
+
+    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
+    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents
+    {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event)
+        {
+            ModItemProperties.addCustomItemProperties();
+        }
     }
 
 }

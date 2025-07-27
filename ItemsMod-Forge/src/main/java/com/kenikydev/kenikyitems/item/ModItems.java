@@ -91,6 +91,9 @@ public class ModItems {
             () -> new AnimalArmorItem(ModArmorMaterial.SAPPHIRE_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
                     false, new Item.Properties().stacksTo(1)));
 
+    public static final RegistryObject<Item> SAPPHIRE_BOW = ITEMS.register("sapphire_bow",
+            () -> new BowItem(new Item.Properties().durability(500)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

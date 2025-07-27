@@ -37,6 +37,7 @@ public class ModCreativeModTabs {
 
                 //Armas
                 pOutput.accept(ModItems.SAPPHIRE_SWORD.get());
+                pOutput.accept(ModItems.SAPPHIRE_BOW.get());
 
                 //Armaduras
                 pOutput.accept(ModItems.SAPPHIRE_HELMET.get());
