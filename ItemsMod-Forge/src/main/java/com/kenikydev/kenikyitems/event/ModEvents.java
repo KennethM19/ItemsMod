@@ -3,9 +3,14 @@ package com.kenikydev.kenikyitems.event;
 import com.kenikydev.kenikyitems.KenikyItems;
 import com.kenikydev.kenikyitems.item.custom.HammerItem;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -35,6 +40,15 @@ public class ModEvents {
                         HARVESTED_BLOCKS.add(pos)) {  // add() devuelve true si no estaba presente
                     serverPlayer.gameMode.destroyBlock(pos);
                 }
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onLivingDamage(LivingDamageEvent event) {
+        if (event.getEntity() instanceof Sheep sheep && event.getSource().getDirectEntity() instanceof Player player) {
+            if (player.getMainHandItem().getItem() == Items.END_ROD) {
+                player.sendSystemMessage(Component.literal(player.getName().getString() + "MALO"));
             }
         }
     }

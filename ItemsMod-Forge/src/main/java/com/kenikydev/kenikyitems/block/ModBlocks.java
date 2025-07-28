@@ -4,6 +4,7 @@ import com.kenikydev.kenikyitems.KenikyItems;
 import com.kenikydev.kenikyitems.block.custom.MagicBlock;
 import com.kenikydev.kenikyitems.block.custom.SapphireLampBlock;
 import com.kenikydev.kenikyitems.item.ModItems;
+import com.kenikydev.kenikyitems.sound.ModSounds;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -27,7 +28,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> DEEPSLATE_SAPPHIRE_ORE = registerBlock("deepslate_sapphire_ore", () -> new DropExperienceBlock(UniformInt.of(3,6), BlockBehaviour.Properties.of().strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
-    public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block", () -> new MagicBlock(BlockBehaviour.Properties.of().strength(6f).noLootTable().sound(SoundType.STONE)));
+    public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block", () -> new MagicBlock(BlockBehaviour.Properties.of().strength(6f).noLootTable().sound(ModSounds.MAGIC_BLOCK_SOUNDS)));
 
     public static final RegistryObject<SlabBlock> SAPPHIRE_SLABS = registerBlock("sapphire_slabs",
             () -> new SlabBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));

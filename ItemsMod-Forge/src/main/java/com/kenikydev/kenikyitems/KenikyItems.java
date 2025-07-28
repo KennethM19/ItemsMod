@@ -4,6 +4,7 @@ import com.kenikydev.kenikyitems.block.ModBlocks;
 import com.kenikydev.kenikyitems.component.ModDataComponentsTypes;
 import com.kenikydev.kenikyitems.item.ModCreativeModTabs;
 import com.kenikydev.kenikyitems.item.ModItems;
+import com.kenikydev.kenikyitems.sound.ModSounds;
 import com.kenikydev.kenikyitems.util.ModItemProperties;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -47,6 +48,8 @@ public class KenikyItems
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+
+        ModSounds.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

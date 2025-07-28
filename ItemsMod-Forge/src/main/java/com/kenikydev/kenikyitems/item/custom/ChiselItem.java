@@ -2,6 +2,7 @@ package com.kenikydev.kenikyitems.item.custom;
 
 import com.kenikydev.kenikyitems.block.ModBlocks;
 import com.kenikydev.kenikyitems.component.ModDataComponentsTypes;
+import com.kenikydev.kenikyitems.sound.ModSounds;
 import com.kenikydev.kenikyitems.util.ShiftTooltipSupport;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -49,7 +50,7 @@ public class ChiselItem extends Item {
 
                 tool.hurtAndBreak(1,((ServerLevel) level),((ServerPlayer) player), item -> player.onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
 
-                level.playSound(null, pos, SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS);
+                level.playSound(null, pos, ModSounds.CHISEL_USE.get(), SoundSource.BLOCKS);
 
                 tool.set(ModDataComponentsTypes.COORDINATES.get(), context.getClickedPos());
             }
