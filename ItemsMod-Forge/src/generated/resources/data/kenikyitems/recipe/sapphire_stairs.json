@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "sapphire",
+  "key": {
+    "#": {
+      "item": "kenikyitems:sapphire"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "kenikyitems:sapphire_stairs"
+  }
+}

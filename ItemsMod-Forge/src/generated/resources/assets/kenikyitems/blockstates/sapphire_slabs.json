@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "kenikyitems:block/sapphire_slabs"
+    },
+    "type=double": {
+      "model": "kenikyitems:block/sapphire_block"
+    },
+    "type=top": {
+      "model": "kenikyitems:block/sapphire_slabs_top"
+    }
+  }
+}

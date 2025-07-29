@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "kenikyitems:block/sapphire_lamp_off"
+    },
+    "clicked=true": {
+      "model": "kenikyitems:block/sapphire_lamp_on"
+    }
+  }
+}

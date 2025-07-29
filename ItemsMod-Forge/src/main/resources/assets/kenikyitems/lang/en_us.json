@@ -1,0 +1,49 @@
+{
+  "item.kenikyitems.sapphire" : "Sapphire",
+  "item.kenikyitems.raw_sapphire": "Raw Sapphire",
+  "item.kenikyitems.chisel" : "Chisel",
+  "item.kenikyitems.kfood":"Kfood",
+  "item.kenikyitems.aurora_ashes": "Aurora",
+  "item.kenikyitems.apphire_pickaxe": "Pickaxe of Sapphire",
+  "item.kenikyitems.sapphire_axe": "Axe of Sapphire",
+  "item.kenikyitems.sapphire_sword": "Sword of Sapphire",
+  "item.kenikyitems.sapphire_shovel": "Shovel of Sapphire",
+  "item.kenikyitems.sapphire_hoe": "Hoe of Sapphire",
+  "item.kenikyitems.sapphire_hammer": "Hammer of Sapphire",
+  "item.kenikyitems.sapphire_helmet": "Helmet of Sapphire",
+  "item.kenikyitems.sapphire_leggings": "Leggings of Sapphire",
+  "item.kenikyitems.sapphire_chestplate": "Chestplate of Sapphire",
+  "item.kenikyitems.sapphire_boots": "Boots of Sapphire",
+  "item.kenikyitems.sapphire_horse_armor": "Sapphire Horse Armor",
+  "item.kenikyitems.sapphire_bow": "Bow of Sapphire",
+  "item.minecraft.potion.effect.slimey_potion": "Slimey Potion",
+  "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
+  "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion",
+
+
+  "block.kenikyitems.sapphire_block": "Block of Sapphire",
+  "block.kenikyitems.sapphire_ore": "Sapphire Ore",
+  "block.kenikyitems.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+  "block.kenikyitems.magic_block": "Magic Block",
+  "block.kenikyitems.sapphire_slabs": "Slab of Sapphire",
+  "block.kenikyitems.sapphire_stairs": "Stair of Sapphire",
+  "block.kenikyitems.sapphire_pressure_plate": "Pressure Plate of Sapphire",
+  "block.kenikyitems.sapphire_button": "Button of Sapphire",
+  "block.kenikyitems.sapphire_fence": "Fence of Sapphire",
+  "block.kenikyitems.sapphire_fence_gate": "Fence Gate of Sapphire",
+  "block.kenikyitems.sapphire_wall": "Wall of Sapphire",
+  "block.kenikyitems.sapphire_door": "Door of Sapphire",
+  "block.kenikyitems.sapphire_trapdoor": "Trapdoor of Sapphire",
+  "block.kenikyitems.sapphire_lamp": "Lamp of sapphire",
+
+
+  "creativetab.keniky_items_tab": "Items Mod",
+
+  "tooltip.items.custom.magic_block": "This block is magic",
+  "tooltip.items.custom.aurora_ashes": "This is a better fuel",
+  "tooltip.items.custom.kfood": "Eat for more speed",
+  "tooltip.items.custom.chisel": "Change texture block",
+  "tooltip.items.custom.shift_up": "Press §eShitf§r for more information",
+
+  "effect.kenikyitems.smiley": "Slimey"
+}
