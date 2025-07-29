@@ -2,6 +2,7 @@ package com.kenikydev.kenikyitems.event;
 
 import com.kenikydev.kenikyitems.KenikyItems;
 import com.kenikydev.kenikyitems.item.custom.HammerItem;
+import com.kenikydev.kenikyitems.potion.ModPotions;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
@@ -10,6 +11,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionBrewing;
+import net.minecraft.world.item.alchemy.Potions;
+import net.minecraftforge.event.brewing.BrewingRecipeRegisterEvent;
+import net.minecraftforge.event.brewing.PotionBrewEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -45,11 +50,19 @@ public class ModEvents {
     }
 
     @SubscribeEvent
-    public static void onLivingDamage(LivingDamageEvent event) {
-        if (event.getEntity() instanceof Sheep sheep && event.getSource().getDirectEntity() instanceof Player player) {
-            if (player.getMainHandItem().getItem() == Items.END_ROD) {
-                player.sendSystemMessage(Component.literal(player.getName().getString() + "MALO"));
+    public static void onLivingDamage(LivingDamageEvent event) { //Evento al hacer daño
+        if (event.getEntity() instanceof Sheep sheep && event.getSource().getDirectEntity() instanceof Player player) { //El daño fue causado del jugador a una oveja
+            if (player.getMainHandItem().getItem() == Items.END_ROD) { //el daño fue realizado con una vara del end
+                player.sendSystemMessage(Component.literal(player.getName().getString() + "MALO")); //Envia mensaje (nombre) + MALO
             }
         }
+    }
+
+    @SubscribeEvent
+    public static void onBrewingRecipeRegister(BrewingRecipeRegisterEvent event) { //Añade una nueva receta de poción a la mesa de brewing
+        PotionBrewing.Builder builder = event.getBuilder();
+
+        //Convierte una poción incómoda + bola de slime en tu poción personalizada "Slimey" (Posion base , Catalizador, Pocion final)
+        builder.addMix(Potions.AWKWARD, Items.SLIME_BALL, ModPotions.SLIMEY_POTION.getHolder().get());
     }
 }

@@ -2,8 +2,10 @@ package com.kenikydev.kenikyitems;
 
 import com.kenikydev.kenikyitems.block.ModBlocks;
 import com.kenikydev.kenikyitems.component.ModDataComponentsTypes;
+import com.kenikydev.kenikyitems.effect.ModEffects;
 import com.kenikydev.kenikyitems.item.ModCreativeModTabs;
 import com.kenikydev.kenikyitems.item.ModItems;
+import com.kenikydev.kenikyitems.potion.ModPotions;
 import com.kenikydev.kenikyitems.sound.ModSounds;
 import com.kenikydev.kenikyitems.util.ModItemProperties;
 import com.mojang.logging.LogUtils;
@@ -50,6 +52,10 @@ public class KenikyItems
         modEventBus.addListener(this::commonSetup);
 
         ModSounds.register(modEventBus);
+
+        ModEffects.register(modEventBus);
+
+        ModPotions.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

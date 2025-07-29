@@ -16,6 +16,10 @@
   "item.kenikyitems.sapphire_boots": "Boots of Sapphire",
   "item.kenikyitems.sapphire_horse_armor": "Sapphire Horse Armor",
   "item.kenikyitems.sapphire_bow": "Bow of Sapphire",
+  "item.minecraft.potion.effect.slimey_potion": "Slimey Potion",
+  "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
+  "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion",
+
 
   "block.kenikyitems.sapphire_block": "Block of Sapphire",
   "block.kenikyitems.sapphire_ore": "Sapphire Ore",
@@ -39,5 +43,7 @@
   "tooltip.items.custom.aurora_ashes": "This is a better fuel",
   "tooltip.items.custom.kfood": "Eat for more speed",
   "tooltip.items.custom.chisel": "Change texture block",
-  "tooltip.items.custom.shift_up": "Press §eShitf§r for more information"
+  "tooltip.items.custom.shift_up": "Press §eShitf§r for more information",
+
+  "effect.kenikyitems.smiley": "Slimey"
 }
