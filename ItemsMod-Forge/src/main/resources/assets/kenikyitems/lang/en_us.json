@@ -19,6 +19,7 @@
   "item.minecraft.potion.effect.slimey_potion": "Slimey Potion",
   "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
   "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion",
+  "item.kenikyitems.kohlrabi_seed": "Kohlrabi Seeds",
 
 
   "block.kenikyitems.sapphire_block": "Block of Sapphire",
@@ -35,6 +36,7 @@
   "block.kenikyitems.sapphire_door": "Door of Sapphire",
   "block.kenikyitems.sapphire_trapdoor": "Trapdoor of Sapphire",
   "block.kenikyitems.sapphire_lamp": "Lamp of sapphire",
+  "block.kenikyitems.kohlrabi_crop": "Kohlrabi Crop",
 
 
   "creativetab.keniky_items_tab": "Items Mod",

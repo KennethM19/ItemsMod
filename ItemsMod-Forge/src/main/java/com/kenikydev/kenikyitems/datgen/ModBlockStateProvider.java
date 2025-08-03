@@ -2,16 +2,21 @@ package com.kenikydev.kenikyitems.datgen;
 
 import com.kenikydev.kenikyitems.KenikyItems;
 import com.kenikydev.kenikyitems.block.ModBlocks;
+import com.kenikydev.kenikyitems.block.custom.KohlrabiCropBLock;
 import com.kenikydev.kenikyitems.block.custom.SapphireLampBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -43,6 +48,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.SAPPHIRE_TRAPDOOR, "_bottom");
 
         customLamp();
+
+        makeCrop(((CropBlock) ModBlocks.KOHLRABI_CROP.get()), "kohlrabi_crop_stage", "kohlrabi_crop_stage");
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
@@ -73,5 +80,31 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         simpleBlockItem(ModBlocks.SAPPHIRE_LAMP.get(), models().cubeAll("sapphire_lamp_on",
                 ResourceLocation.fromNamespaceAndPath(KenikyItems.MODID, "block/sapphire_lamp_on")));
+    }
+
+    private void makeCrop(Block block, String modelName, String textureName) {
+        //Crea una función lambda que toma un BlockState y devuelve un array de ConfiguredModel
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, block, modelName, textureName);
+
+        //Usa getVariantBuilder para configurar los modelos variantes para cada estado posible del bloque
+        getVariantBuilder(block).forAllStates(function);
+
+    }
+
+    private ConfiguredModel[] states(BlockState state, Block block, String modelName, String textureName) {
+        int age = state.getValue(((KohlrabiCropBLock) block).getAgeProperty()); //Obtiene la edad del cultivo del estado actual del bloque
+        ResourceLocation texture = ResourceLocation.fromNamespaceAndPath( //Crea una ubicación de recurso (textura)
+                KenikyItems.MODID, //El ID del mod
+                "block/" + textureName + age //La ruta base de la textura + la edad actual
+        );
+
+        return new ConfiguredModel[] {
+                new ConfiguredModel(
+                        models().crop( //Usa el sistema de modelos para crear un modelo de tipo "crop"
+                                modelName + age, //Asigna un nombre único al modelo basado en la edad
+                                texture //Especifica la textura correspondiente
+                        ).renderType("cutout") //Aplica el render type "cutout"
+                )
+        };
     }
 }

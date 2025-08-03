@@ -1,5 +1,6 @@
-// 1.21	2025-07-25T17:01:31.4473679	Loot Tables
+// 1.21	2025-08-02T21:54:45.0581191	Loot Tables
 e99e4ab7f27733852c97f624643533ea75e77235 data/kenikyitems/loot_table/blocks/deepslate_sapphire_ore.json
+3a5849818c1ed7218f29a218a7a14364d5e96324 data/kenikyitems/loot_table/blocks/kohlrabi_crop.json
 42675b803e8c6a22f653f333e6c8c8a0b0a65eb3 data/kenikyitems/loot_table/blocks/sapphire_block.json
 1cd5b4c3555b4e2eac26ba2a8ec02679bfacd848 data/kenikyitems/loot_table/blocks/sapphire_button.json
 2ece7a0733729c58c32bf98add5bb9985c7ab9e9 data/kenikyitems/loot_table/blocks/sapphire_door.json

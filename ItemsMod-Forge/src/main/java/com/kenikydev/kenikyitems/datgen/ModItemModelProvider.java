@@ -51,6 +51,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.AURORA_ASHES.get());
         basicItem(ModItems.KFOOD.get());
         basicItem(ModItems.SAPPHIRE_HORSE_ARMOR.get());
+        basicItem(ModItems.KOHLRABI_SEEDS.get());
 
         //Modelos especiales -Tienen una apariencia diferente como ítem que como bloque colocado
         buttonItem(ModBlocks.SAPPHIRE_BUTTON, ModBlocks.SAPPHIRE_BLOCK);

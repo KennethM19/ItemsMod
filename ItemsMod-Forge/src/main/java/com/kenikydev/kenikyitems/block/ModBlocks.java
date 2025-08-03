@@ -1,6 +1,7 @@
 package com.kenikydev.kenikyitems.block;
 
 import com.kenikydev.kenikyitems.KenikyItems;
+import com.kenikydev.kenikyitems.block.custom.KohlrabiCropBLock;
 import com.kenikydev.kenikyitems.block.custom.MagicBlock;
 import com.kenikydev.kenikyitems.block.custom.SapphireLampBlock;
 import com.kenikydev.kenikyitems.item.ModItems;
@@ -66,6 +67,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> SAPPHIRE_LAMP = registerBlock("sapphire_lamp",
             () -> new SapphireLampBlock(BlockBehaviour.Properties.of().strength(3f)
                     .lightLevel(state -> state.getValue(SapphireLampBlock.CLICKED) ? 15 : 0)));
+
+    public static final RegistryObject<Block> KOHLRABI_CROP = BLOCKS.register("kohlrabi_crop",
+            () -> new KohlrabiCropBLock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

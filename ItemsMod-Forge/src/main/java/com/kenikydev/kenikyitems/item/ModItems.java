@@ -1,6 +1,7 @@
 package com.kenikydev.kenikyitems.item;
 
 import com.kenikydev.kenikyitems.KenikyItems;
+import com.kenikydev.kenikyitems.block.ModBlocks;
 import com.kenikydev.kenikyitems.item.custom.ChiselItem;
 import com.kenikydev.kenikyitems.item.custom.FuelItem;
 import com.kenikydev.kenikyitems.item.custom.HammerItem;
@@ -93,6 +94,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> SAPPHIRE_BOW = ITEMS.register("sapphire_bow",
             () -> new BowItem(new Item.Properties().durability(500)));
+
+    public static final RegistryObject<Item> KOHLRABI_SEEDS = ITEMS.register("kohlrabi_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.KOHLRABI_CROP.get(),  new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

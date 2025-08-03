@@ -46,6 +46,9 @@ public class ModCreativeModTabs {
                 pOutput.accept(ModItems.SAPPHIRE_BOOTS.get());
                 pOutput.accept(ModItems.SAPPHIRE_HORSE_ARMOR.get());
 
+                //SEMILLAS
+                pOutput.accept(ModItems.KOHLRABI_SEEDS.get());
+
                 //Bloques de construcción
                 pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                 pOutput.accept(ModBlocks.SAPPHIRE_PRESSURE_PLATE.get());

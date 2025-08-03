@@ -1,7 +1,9 @@
 package com.kenikydev.kenikyitems.datgen;
 
 import com.kenikydev.kenikyitems.block.ModBlocks;
+import com.kenikydev.kenikyitems.block.custom.KohlrabiCropBLock;
 import com.kenikydev.kenikyitems.item.ModItems;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -14,6 +16,8 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -28,6 +32,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+
+        //Condicional para soltar un item
+        LootItemCondition.Builder lootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.KOHLRABI_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(KohlrabiCropBLock.AGE, KohlrabiCropBLock.MAX_AGE));
+
         dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
         dropSelf(ModBlocks.SAPPHIRE_WALL.get());
         dropSelf(ModBlocks.SAPPHIRE_BUTTON.get());
@@ -49,6 +58,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(), ModItems.RAW_SAPPHIRE.get(), 4, 8));
+
+        this.add(ModBlocks.KOHLRABI_CROP.get(), this.createCropDrops(ModBlocks.KOHLRABI_CROP.get(),
+                ModItems.KFOOD.get(), ModItems.KOHLRABI_SEEDS.get(), lootItemConditionBuilder));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item pItem, float minDrops, float maxDrops) {
