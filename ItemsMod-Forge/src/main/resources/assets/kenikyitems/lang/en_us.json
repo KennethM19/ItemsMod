@@ -45,5 +45,7 @@
   "tooltip.items.custom.chisel": "Change texture block",
   "tooltip.items.custom.shift_up": "Press §eShitf§r for more information",
 
-  "effect.kenikyitems.smiley": "Slimey"
+  "effect.kenikyitems.smiley": "Slimey",
+
+  "enchantment.kenikyitems.lightning_striker": "Lightning striker"
 }

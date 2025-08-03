@@ -36,6 +36,8 @@ public class DtaGenerators {
 
         gen.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
         gen.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
+
+        gen.addProvider(event.includeServer(), new ModDataPackEntries(packOutput, lookupProvider));
     }
 
 }
