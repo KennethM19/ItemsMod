@@ -2,20 +2,27 @@ package com.kenikydev.kenikyitems.datgen;
 
 import com.kenikydev.kenikyitems.KenikyItems;
 import com.kenikydev.kenikyitems.enchantment.ModEnchantmets;
+import com.kenikydev.kenikyitems.worldgen.ModBiomeModifiers;
+import com.kenikydev.kenikyitems.worldgen.ModConfiguredFeatures;
+import com.kenikydev.kenikyitems.worldgen.ModPlacedFeatures;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public class ModDataPackEntries extends DatapackBuiltinEntriesProvider {
 
-    //Añade registros personalizados al sistema, registra encantamientos usando el metodo bootstrap de ModEnchantmets
+    //Añade registros personalizados al sistema
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
-            .add(Registries.ENCHANTMENT, ModEnchantmets::bootstrap);
+            .add(Registries.ENCHANTMENT, ModEnchantmets::bootstrap) //registra encantamientos usando el metodo bootstrap de ModEnchantmets
+            .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
+            .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
+            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
 
 
     public ModDataPackEntries(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
