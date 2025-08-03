@@ -25,13 +25,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.SAPPHIRE_BLOCK.get())
                 .add(ModBlocks.MAGIC_BLOCK.get())
                 .add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get())
-                .add(ModBlocks.SAPPHIRE_ORE.get());
+                .add(ModBlocks.SAPPHIRE_ORE.get())
+                .add(ModBlocks.SAPPHIRE_NETHER_ORE.get())
+                .add(ModBlocks.SAPPHIRE_STAIRS.get());
 
         //Bloques que se pican con un material mínimo - Hierro
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.SAPPHIRE_BLOCK.get())
                 .add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get())
-                .add(ModBlocks.SAPPHIRE_ORE.get());
+                .add(ModBlocks.SAPPHIRE_ORE.get())
+                .add(ModBlocks.SAPPHIRE_NETHER_ORE.get())
+                .add(ModBlocks.SAPPHIRE_STAIRS.get());
 
         //Bloques que se pican con un material mínimo - Diamante
         tag(BlockTags.NEEDS_DIAMOND_TOOL)

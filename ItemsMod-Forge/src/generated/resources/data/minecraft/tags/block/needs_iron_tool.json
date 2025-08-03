@@ -2,6 +2,8 @@
   "values": [
     "kenikyitems:sapphire_block",
     "kenikyitems:deepslate_sapphire_ore",
-    "kenikyitems:sapphire_ore"
+    "kenikyitems:sapphire_ore",
+    "kenikyitems:sapphire_nether_ore",
+    "kenikyitems:sapphire_stairs"
   ]
 }

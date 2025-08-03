@@ -59,6 +59,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(), ModItems.RAW_SAPPHIRE.get(), 4, 8));
 
+        this.add(ModBlocks.SAPPHIRE_NETHER_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.SAPPHIRE_NETHER_ORE.get(), ModItems.RAW_SAPPHIRE.get(), 4, 8));
+
+        this.add(ModBlocks.SAPPHIRE_END_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.SAPPHIRE_END_ORE.get(), ModItems.RAW_SAPPHIRE.get(), 4, 8));
+
         this.add(ModBlocks.KOHLRABI_CROP.get(), this.createCropDrops(ModBlocks.KOHLRABI_CROP.get(),
                 ModItems.KFOOD.get(), ModItems.KOHLRABI_SEEDS.get(), lootItemConditionBuilder));
     }

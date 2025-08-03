@@ -1,9 +1,9 @@
-// 1.21	2025-07-26T00:30:46.4165854	Tags for minecraft:block mod id kenikyitems
+// 1.21	2025-08-03T17:49:26.7489506	Tags for minecraft:block mod id kenikyitems
 4ee81f3e13ecd11c665cccff9b7df9b68798a54b data/kenikyitems/tags/block/incorrect_for_sapphire_tool.json
 a249c46329a41538f49a564e1f14338aaf1be5a0 data/kenikyitems/tags/block/needs_sapphire_tool.json
 356b515b711019b64840e4d3631e3c9c8961b66f data/minecraft/tags/block/fences.json
 debc057b8a442677c4abe05750d01a83b254a901 data/minecraft/tags/block/fence_gates.json
-aab804ec24f31a6dfcfc321fd92573d1adac7324 data/minecraft/tags/block/mineable/pickaxe.json
+ce76136a2e6f952a0f69ec8c004d3d658f0a885e data/minecraft/tags/block/mineable/pickaxe.json
 cb67e2535fc8988789df03669c566de0659ba386 data/minecraft/tags/block/needs_diamond_tool.json
-2b38c6d5a318fca2bd327224bf9dd8450a2fcafe data/minecraft/tags/block/needs_iron_tool.json
+c5cda3c98ede77a477e363c0e2187f5aa5e3559e data/minecraft/tags/block/needs_iron_tool.json
 d84813cf1b62b1d5cd3306853130dabd9ecb8be4 data/minecraft/tags/block/walls.json
