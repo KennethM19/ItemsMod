@@ -49,6 +49,9 @@ public class ModCreativeModTabs {
                 //SEMILLAS
                 pOutput.accept(ModItems.KOHLRABI_SEEDS.get());
 
+                //Spawns
+                pOutput.accept(ModItems.TRICERATOPS_SPAWN_EGG.get());
+
                 //Bloques de construcción
                 pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                 pOutput.accept(ModBlocks.SAPPHIRE_PRESSURE_PLATE.get());

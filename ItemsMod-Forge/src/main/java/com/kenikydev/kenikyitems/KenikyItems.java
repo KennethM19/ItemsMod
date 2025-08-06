@@ -4,12 +4,15 @@ import com.kenikydev.kenikyitems.block.ModBlocks;
 import com.kenikydev.kenikyitems.component.ModDataComponentsTypes;
 import com.kenikydev.kenikyitems.effect.ModEffects;
 import com.kenikydev.kenikyitems.enchantment.ModEnchantmentEffects;
+import com.kenikydev.kenikyitems.entity.ModEntities;
+import com.kenikydev.kenikyitems.entity.client.TriceratopsRenderer;
 import com.kenikydev.kenikyitems.item.ModCreativeModTabs;
 import com.kenikydev.kenikyitems.item.ModItems;
 import com.kenikydev.kenikyitems.potion.ModPotions;
 import com.kenikydev.kenikyitems.sound.ModSounds;
 import com.kenikydev.kenikyitems.util.ModItemProperties;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -55,6 +58,8 @@ public class KenikyItems
 
         ModPotions.register(modEventBus);
 
+        ModEntities.register(modEventBus);
+
         ModEnchantmentEffects.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
@@ -77,9 +82,9 @@ public class KenikyItems
     public static class ClientModEvents
     {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
+        public static void onClientSetup(FMLClientSetupEvent event) {
             ModItemProperties.addCustomItemProperties();
+            EntityRenderers.register(ModEntities.TRICERATOPS.get(), TriceratopsRenderer::new);
         }
     }
 

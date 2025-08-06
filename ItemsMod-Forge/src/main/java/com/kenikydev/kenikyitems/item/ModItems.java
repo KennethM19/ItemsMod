@@ -2,6 +2,7 @@ package com.kenikydev.kenikyitems.item;
 
 import com.kenikydev.kenikyitems.KenikyItems;
 import com.kenikydev.kenikyitems.block.ModBlocks;
+import com.kenikydev.kenikyitems.entity.ModEntities;
 import com.kenikydev.kenikyitems.item.custom.ChiselItem;
 import com.kenikydev.kenikyitems.item.custom.FuelItem;
 import com.kenikydev.kenikyitems.item.custom.HammerItem;
@@ -9,6 +10,7 @@ import com.kenikydev.kenikyitems.item.custom.ModArmorItem;
 import com.kenikydev.kenikyitems.util.ShiftTooltipSupport;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -97,6 +99,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> KOHLRABI_SEEDS = ITEMS.register("kohlrabi_seeds",
             () -> new ItemNameBlockItem(ModBlocks.KOHLRABI_CROP.get(),  new Item.Properties()));
+
+    public static final RegistryObject<Item> TRICERATOPS_SPAWN_EGG = ITEMS.register("triceratops_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.TRICERATOPS, 0x53524b, 0xdac741, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

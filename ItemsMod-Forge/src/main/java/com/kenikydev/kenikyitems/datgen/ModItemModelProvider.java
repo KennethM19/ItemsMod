@@ -21,6 +21,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.LinkedHashMap;
 
+//Genera archivos JSON de modelos para todos los items de tu mod
 public class ModItemModelProvider extends ItemModelProvider {
     private static LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>(); //Agrega más dieño de las armaduras con los moldes
     static {
@@ -74,6 +75,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.SAPPHIRE_CHESTPLATE);
         trimmedArmorItem(ModItems.SAPPHIRE_LEGGINGS);
         trimmedArmorItem(ModItems.SAPPHIRE_BOOTS);
+
+        //Spawn
+        registerSpawnEgg(ModItems.TRICERATOPS_SPAWN_EGG);
     }
 
     //Función para items con representación especial
@@ -148,5 +152,11 @@ public class ModItemModelProvider extends ItemModelProvider {
                                         "item/" + itemRegistryObject.getId().getPath()));
             });
         }
+    }
+
+    //Manejo de multibles spawn eggs de manera eficiente
+    private void registerSpawnEgg(RegistryObject<? extends Item> spawnEggItem) {
+        withExistingParent(spawnEggItem.getId().getPath(),
+                mcLoc("item/template_spawn_egg"));
     }
 }

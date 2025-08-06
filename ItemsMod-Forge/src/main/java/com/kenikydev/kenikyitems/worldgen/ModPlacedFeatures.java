@@ -25,8 +25,10 @@ public class ModPlacedFeatures {
         var configuredFeature = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, SAPPHIRE_ORE_PLACED_KEY, configuredFeature.getOrThrow(ModConfiguredFeatures.OVERWORLD_SAPPHIRE_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(12,
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80)))
+                ModOrePlacement.commonOrePlacement(12, //cantidad por chunk
+                        HeightRangePlacement.uniform(
+                                VerticalAnchor.absolute(-64), //Desde
+                                VerticalAnchor.absolute(80))) //Hasta
                 );
 
         register(context, NETHER_SAPPHIRE_ORE_PLACED_KEY, configuredFeature.getOrThrow(ModConfiguredFeatures.NETHER_SAPPHIRE_ORE_KEY),

@@ -1,8 +1,9 @@
-// 1.21	2025-08-03T17:49:26.7509682	Registries
+// 1.21	2025-08-06T03:52:30.5341296	Registries
 6679160b1ff9f35d8f35318f506486680de31ac8 data/kenikyitems/enchantment/lightning_striker.json
 7066605c3fc686c08f465230dd933e86e0524f85 data/kenikyitems/forge/biome_modifier/add_end_sapphire_ore.json
 3d3dc669b6feb6b6adea17da36f9ecccc2f8533c data/kenikyitems/forge/biome_modifier/add_nether_sapphire_ore.json
 c3635bd28de4ee8aae02310201cea07637c70690 data/kenikyitems/forge/biome_modifier/add_sapphire_ore.json
+d9f816d7c71f7f388183535f33cf09076c0c6459 data/kenikyitems/forge/biome_modifier/spawn_triceratops.json
 ba5a26bb0502affe494e0a95bb5d09c7dcb70374 data/kenikyitems/worldgen/configured_feature/end_sapphire_ore.json
 97b3ae198e29fe931b87a162760877d0c8574b3c data/kenikyitems/worldgen/configured_feature/nether_sapphire_ore.json
 9c25fb16556d8dbed9a062162ca4d61db6532f72 data/kenikyitems/worldgen/configured_feature/overworld_sapphire_ore.json

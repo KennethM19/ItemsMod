@@ -20,6 +20,7 @@
   "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
   "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion",
   "item.kenikyitems.kohlrabi_seed": "Kohlrabi Seeds",
+  "item.kenikyitems.triceratops_spawn_egg": "Triceratops Spawn Egg",
 
 
   "block.kenikyitems.sapphire_block": "Block of Sapphire",
@@ -51,5 +52,7 @@
 
   "effect.kenikyitems.smiley": "Slimey",
 
-  "enchantment.kenikyitems.lightning_striker": "Lightning striker"
+  "enchantment.kenikyitems.lightning_striker": "Lightning striker",
+
+  "entity.kenikyitems.triceratops": "Triceratops"
 }
